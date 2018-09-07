@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+echo "Running sync..."
+
 if [ -n "$AWS_BUCKET" ]; then
   cat << EOF > .s3cfg
 [default]
@@ -36,3 +39,6 @@ EOF
   fi
   rm .dropbox_uploader
 fi
+
+
+echo "Sync done..."
