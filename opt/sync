@@ -40,5 +40,6 @@ EOF
   rm .dropbox_uploader
 fi
 
-
+# display message inside minecraft
+screen -S minecraft -p 0 -X stuff "`printf "say Save sync DONE\r"`"
 echo "Sync done..."

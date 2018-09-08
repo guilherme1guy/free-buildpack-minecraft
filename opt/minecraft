@@ -49,6 +49,10 @@ main_pid=$!
 # Flush the logfile every second, and ensure that the logfile exists
 screen -X "logfile 1" && sleep 1
 
+# Alert messafe, on loop
+eval "while true; do sleep 1800; screen -S minecraft -p 0 -X stuff "`printf "say [ALETRT] Reload page or server will shutdown\r"`"; done &"
+
+
 echo "Tailing log"
 eval "tail -f screenlog.0 &"
 tail_pid=$!
