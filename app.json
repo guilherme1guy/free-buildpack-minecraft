@@ -30,7 +30,12 @@
     "DROPBOX_ACCESS_TOKEN": {
       "description": "The dropbox access token for syncing",
       "required": false
+    },
+    "DISCORD_WEBHOOK_URL": {
+      "description": "The discord webhook to call with the server ip",
+      "required": false
     }
+    
   },
   "buildpacks": [
     {

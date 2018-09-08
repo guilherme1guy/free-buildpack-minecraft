@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "-----> Install npm dependences"
+npm install webhook-discord
+
 mc_port=25566
 port=${1:-${PORT:-8080}}
 
