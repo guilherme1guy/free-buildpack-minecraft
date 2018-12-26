@@ -2,7 +2,7 @@
 
 var fs = require('fs')
 var http = require('http')
-const Webhook = require("webhook-discord")
+const webhook = require("webhook-discord")
 
 // Get port of ngrok from ngrok.log
 var log = fs.readFileSync('ngrok.log', {encoding: 'utf-8'})
