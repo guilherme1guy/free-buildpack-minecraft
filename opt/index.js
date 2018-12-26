@@ -16,7 +16,7 @@ const minectaft_version = process.env.MINECRAFT_VERSION
 if (webhook_url != null){
   // Call the webhook with the server address
 
-  const Hook = new Webhook(webhook_url)
+  const Hook = new webhook.Webhook(webhook_url)
   Hook.info('Minecraft Server','Server Address: 0.tcp.ngrok.io:' + port + "      -------  Minecraft version: " + minectaft_version + "         -----   If you can't connect, wait a few minutes")
 
 
