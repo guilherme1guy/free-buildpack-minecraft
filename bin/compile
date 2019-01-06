@@ -107,7 +107,17 @@ fi
 echo -n "-----> Installing Minecraft ${minecraft_version}... "
 curl -o minecraft.jar -s -L $minecraft_url
 mv minecraft.jar $BUILD_DIR/minecraft.jar
+
+if [ -n "${USE_FORGE:-""}" ]; then
+  echo -n "-----> Downloading forge... "
+  curl -o forge-universal.jar "${forge_download_url}"
+  mv forge-universal.jar $BUILD_DIR/forge-universal.jar
+  echo "done"
+fi
+
 echo "done"
+
+
 
 if [ -n "${MINECRAFT_EULA:-""}" ]; then
   echo -n "-----> Accepting Minecraft EULA... "
