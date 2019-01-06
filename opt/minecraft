@@ -48,7 +48,7 @@ if [ -n "${USE_FORGE:-""}" ]; then
   main_pid=$!
 else
   echo "Starting: minecraft ${mc_port}"
-  eval "screen -L -h 2048 -dmS minecraft java -Xmx${heap} -Xms${heap} -jar minecraft.jar nogui"
+  eval "screen -L -h 2048 -dmS minecraft java -Xmx${heap} -Xms${heap} -jar $minecraft_jar_name nogui"
   main_pid=$!
 fi
 

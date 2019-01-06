@@ -105,8 +105,8 @@ if [ -n "${USE_SPIGOT:-""}" ]; then
 fi
 
 echo -n "-----> Installing Minecraft ${minecraft_version}... "
-curl -o minecraft.jar -s -L $minecraft_url
-mv minecraft.jar $BUILD_DIR/minecraft.jar
+curl -o $minecraft_jar_name.jar -s -L $minecraft_url
+mv $minecraft_jar_name.jar $BUILD_DIR/$minecraft_jar_name.jar
 
 if [ -n "${USE_FORGE:-""}" ]; then
   echo -n "-----> Downloading forge... "
