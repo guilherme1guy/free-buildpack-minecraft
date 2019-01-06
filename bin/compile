@@ -112,6 +112,12 @@ if [ -n "${USE_FORGE:-""}" ]; then
   echo -n "-----> Downloading forge... "
   curl -o forge-universal.jar "${forge_download_url}"
   mv forge-universal.jar $BUILD_DIR/forge-universal.jar
+
+  curl -o forge-installer.jar "${forge_installer_url}"
+  mv forge-installer.jar $BUILD_DIR/forge-installer.jar
+  cd $BUILD_DIR
+  java -jar $BUILD_DIR/forge-installer.jar --installServer
+  cd ..
   echo "done"
 fi
 
